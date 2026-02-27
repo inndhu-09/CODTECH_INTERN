@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Weather Dashboard</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com">k</script>
+</head>
+<body id="mainBg" class="min-h-screen flex items-center justify-center transition-all duration-500">
+  <div class="bg-white/80 p-8 rounded-xl shadow-lg max-w-md w-full">
+    <h1 class="text-2xl font-bold mb-4 text-center">Weather Dashboard</h1>
+    <form id="weatherForm" class="flex gap-2 mb-6">
+      <input type="text" id="cityInput" placeholder="Enter city name" required class="flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-500" />
+      <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Search</button>
+    </form>
+    <div id="weatherResult" class="text-center space-y-3 min-h-[100px]">
+      <!-- Weather details appear here -->
+    </div>
+    <div id="errorMsg" class="mt-4 text-center text-red-600 font-medium"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

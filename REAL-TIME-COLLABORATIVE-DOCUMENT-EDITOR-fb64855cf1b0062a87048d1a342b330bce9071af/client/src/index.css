@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep a few custom styles that are easier to express in plain CSS.
+   Tailwind utility classes are used directly in React components for layout & look. */
+
+body {
+  @apply bg-slate-100 text-slate-900;
+}
+
+/* Quill-specific tweaks */
+.ql-container {
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.ql-editor {
+  min-height: 60vh;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
