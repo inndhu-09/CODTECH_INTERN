@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Time Tracker & Productivity Analytics",
+  "description": "Tracks active tab time, classifies sites as productive or unproductive, and syncs summaries to a Node.js backend.",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Productivity Dashboard"
+  },
+  "permissions": ["tabs", "storage"],
+  "host_permissions": ["http://localhost:3001/*"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

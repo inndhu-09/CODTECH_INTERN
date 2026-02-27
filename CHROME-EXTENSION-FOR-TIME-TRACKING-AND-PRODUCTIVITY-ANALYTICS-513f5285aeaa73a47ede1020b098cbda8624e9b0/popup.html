@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Productivity Dashboard</title>
+    <!-- Use a simple, modern, responsive layout -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="popup.css" />
+    <!-- Chart.js CDN for chart rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="popup-root">
+      <header class="popup-header">
+        <div>
+          <h1 class="popup-title">Today's Productivity</h1>
+          <p class="popup-subtitle" id="dateLabel">Loading date...</p>
+        </div>
+      </header>
+
+      <main class="popup-main">
+        <section class="summary-section">
+          <div class="summary-card productive">
+            <h2>Productive</h2>
+            <p class="time-value" id="productiveTime">0h 00m</p>
+          </div>
+          <div class="summary-card unproductive">
+            <h2>Unproductive</h2>
+            <p class="time-value" id="unproductiveTime">0h 00m</p>
+          </div>
+          <div class="summary-card neutral">
+            <h2>Neutral</h2>
+            <p class="time-value" id="neutralTime">0h 00m</p>
+          </div>
+        </section>
+
+        <section class="chart-section">
+          <h2 class="section-title">Time Distribution</h2>
+          <canvas id="productivityChart" width="320" height="200"></canvas>
+          <p class="hint-text">
+            Time is measured in minutes based on your active Chrome tab.
+          </p>
+        </section>
+
+        <section class="domains-section">
+          <div class="domains-header">
+            <h2 class="section-title">Top Domains Today</h2>
+          </div>
+          <ul class="domain-list" id="domainList">
+            <!-- Filled dynamically from popup.js -->
+          </ul>
+        </section>
+      </main>
+
+      <footer class="popup-footer">
+        <span class="footer-badge">Internship Demo Build</span>
+        <button id="refreshButton" class="refresh-button">Refresh</button>
+      </footer>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+  </html>
+

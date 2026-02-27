@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Productivity Tracker & Analytics",
+  "description": "Tracks time spent on websites, classifies them as productive or unproductive, and shows daily analytics in a popup with backend storage.",
+  "version": "1.0.0",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://localhost:4000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Productivity Dashboard",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

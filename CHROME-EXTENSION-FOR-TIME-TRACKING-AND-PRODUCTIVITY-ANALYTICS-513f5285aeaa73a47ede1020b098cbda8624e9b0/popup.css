@@ -1,0 +1,231 @@
+/* popup.css */
+/* ------------------------------------------------------------------
+   Overall layout & typography
+   ------------------------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: linear-gradient(145deg, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+.popup-root {
+  width: 360px;
+  max-height: 540px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  gap: 10px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 4px 2px;
+}
+
+.popup-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.popup-subtitle {
+  margin: 2px 0 0 0;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.popup-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-title {
+  margin: 0 0 4px 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.hint-text {
+  margin: 6px 0 0;
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+/* ------------------------------------------------------------------
+   Summary tiles
+   ------------------------------------------------------------------ */
+
+.summary-section {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.summary-card {
+  border-radius: 10px;
+  padding: 8px 6px;
+  background: radial-gradient(circle at top left, #1f2937, #020617);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.summary-card h2 {
+  margin: 0 0 4px 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.summary-card.productive h2 {
+  color: #22c55e;
+}
+
+.summary-card.unproductive h2 {
+  color: #ef4444;
+}
+
+.summary-card.neutral h2 {
+  color: #f97316;
+}
+
+.time-value {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+/* ------------------------------------------------------------------
+   Chart
+   ------------------------------------------------------------------ */
+
+.chart-section {
+  border-radius: 12px;
+  padding: 8px;
+  background: radial-gradient(circle at top left, #020617, #020617);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+#productivityChart {
+  width: 100% !important;
+  height: 180px !important;
+}
+
+/* ------------------------------------------------------------------
+   Domain list
+   ------------------------------------------------------------------ */
+
+.domains-section {
+  border-radius: 12px;
+  padding: 8px;
+  background: radial-gradient(circle at top left, #020617, #020617);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.domains-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.domain-list {
+  list-style: none;
+  margin: 2px 0 0 0;
+  padding: 0;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.domain-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 4px;
+  border-radius: 8px;
+  transition: background 0.15s ease;
+  font-size: 0.78rem;
+}
+
+.domain-item:nth-child(odd) {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.domain-item:nth-child(even) {
+  background: rgba(30, 64, 175, 0.25);
+}
+
+.domain-item:hover {
+  background: rgba(59, 130, 246, 0.25);
+}
+
+.domain-name {
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #e5e7eb;
+}
+
+.domain-time {
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+/* ------------------------------------------------------------------
+   Footer
+   ------------------------------------------------------------------ */
+
+.popup-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  padding: 4px 2px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.footer-badge {
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+.refresh-button {
+  cursor: pointer;
+  border-radius: 999px;
+  border: none;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0b1120;
+  background: linear-gradient(135deg, #38bdf8, #22c55e);
+  box-shadow: 0 8px 18px rgba(56, 189, 248, 0.5);
+  transition: transform 0.1s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.refresh-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(34, 197, 94, 0.6);
+}
+
+.refresh-button:active {
+  transform: translateY(0);
+  opacity: 0.9;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.9);
+}
+
